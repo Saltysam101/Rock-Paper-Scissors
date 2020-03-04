@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    size: 20px;
+    display: grid;
+    grid-template-columns: auto repeat(3, 250px) auto;
+    grid-template-rows: repeat(5, 100px);
+    width: 100vw;
+}
+
+#header{
+    grid-column: 2/ span 3;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+#description{
+    grid-column: 2 / span 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+#user-header{
+    grid-column: 2 / span 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    margin-left: 125px;
+}
+#userchoice{
+    grid-column: 3 / span 2;
+    grid-row: 3;
+    height: 25%;
+    width: 25%;
+    align-self: center;
+    justify-self: center;
+    margin-right: 125px;
+}
+#computer-header{
+    grid-column: 2 / span 2;
+    grid-row: 4;
+    align-self: center;
+    justify-self: center;
+    margin-left: 175px;
+}
+#computerChoice{
+    grid-column: 3 / span 2;
+    grid-row: 4;
+    align-self: center;
+    justify-self: center;
+    margin-right: 50px;
+}
+#computer-win{
+    grid-column: 2 / span 3;
+    grid-row: 5;
+    align-self: center;
+    justify-self: center;
+}
+#user-win{
+    grid-column: 2 / span 3;
+    grid-row: 5;
+    align-self: center;
+    justify-self: center;
+    }

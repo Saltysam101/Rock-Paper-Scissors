@@ -41,10 +41,11 @@ const determineWinner = (userChoice, computerChoice) => {
     }
 }
 const playGame = () => {
-    userChoice = getUserInput('rock');
+    userChoice = document.getElementById('userchoice');
     computerChoice = getComputerInput();
     console.log(`You threw: ${userChoice}`);
-    console.log(`The computer threw: ${computerChoice}`)
+    document.getElementById('computerChoice').innerHTML = computerChoice;
     console.log(determineWinner(userChoice, computerChoice));
 }
+
 playGame();
