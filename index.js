@@ -1,6 +1,8 @@
 const getUserInput = (userChoice) =>{
-userChoice = userChoice.toLowerCase();
-return userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors'? userChoice : console.log('Error!')
+    userChoice = document.getElementById("userchoice").value;
+    userChoice = userChoice.toLowerCase();
+return userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors'? userChoice : alert('Error!');
+
 }
 const getComputerInput = () => {
     let randomNum = Math.floor(Math.random() * 3)
@@ -19,33 +21,33 @@ const getComputerInput = () => {
 }
 const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice){
-        return 'It is a tie!'
+        document.getElementById('winner').innerHTML="It is a tie!";
     }
     if (userChoice === 'rock' && computerChoice === 'paper'){
-        return 'The computer wins!'
+        document.getElementById('winner').innerHTML="The computer won!";
     }
     else{
-        return 'You win!'
+        document.getElementById('winner').innerHTML="You won!";
     }
     if(userChoice === 'paper' && computerChoice === 'scissors'){
-        return 'The computer wins!'
+        document.getElementById('winner').innerHTML="The computer won!";
     }
     else{
-        return 'You win!'
+        document.getElementById('winner').innerHTML="You won!";
     }
     if(userChoice === 'scissors' && computerChoice === 'rock'){
-        return 'The computer wins!'
+        document.getElementById('winner').innerHTML="The computer won!";
     }
     else{
-        return 'You win!'
+        document.getElementById('winner').innerHTML="You won!";
     }
 }
-const playGame = () => {
-    userChoice = document.getElementById('userchoice');
+let playGame = () => {
+    getUserInput();
     computerChoice = getComputerInput();
-    console.log(`You threw: ${userChoice}`);
     document.getElementById('computerChoice').innerHTML = computerChoice;
-    console.log(determineWinner(userChoice, computerChoice));
-}
+    document.getElementById('winner').innerHTML = function () {
+        determineWinner(userChoice, computerChoice);
+    }}
 
-playGame();
+    document.getElementById("play").onclick = function() {playGame();}

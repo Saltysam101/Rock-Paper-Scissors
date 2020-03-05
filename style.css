@@ -15,7 +15,7 @@ body{
     size: 20px;
     display: grid;
     grid-template-columns: auto repeat(3, 250px) auto;
-    grid-template-rows: repeat(5, 100px);
+    grid-template-rows: repeat(6, 100px);
     width: 100vw;
 }
 
@@ -61,15 +61,15 @@ body{
     justify-self: center;
     margin-right: 50px;
 }
-#computer-win{
-    grid-column: 2 / span 3;
+#winner{
+    grid-column: 3;
     grid-row: 5;
     align-self: center;
     justify-self: center;
 }
-#user-win{
-    grid-column: 2 / span 3;
-    grid-row: 5;
+#play{
+    grid-column:3;
+    grid-row: 6;
     align-self: center;
     justify-self: center;
-    }
+}
