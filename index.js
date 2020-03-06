@@ -20,34 +20,23 @@ const getComputerInput = () => {
     }
 }
 const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === computerChoice){
+    if (userChoice === 'rock' && computerChoice === 'paper' || userChoice === 'paper' && computerChoice === 'scissors' || userChoice === 'scissors' && computerChoice === 'rock' ){
+        document.getElementById('winner').innerHTML="The computer won!";
+    }
+    else if (userChoice === computerChoice){
         document.getElementById('winner').innerHTML="It is a tie!";
     }
-    if (userChoice === 'rock' && computerChoice === 'paper'){
-        document.getElementById('winner').innerHTML="The computer won!";
-    }
     else{
         document.getElementById('winner').innerHTML="You won!";
     }
-    if(userChoice === 'paper' && computerChoice === 'scissors'){
-        document.getElementById('winner').innerHTML="The computer won!";
-    }
-    else{
-        document.getElementById('winner').innerHTML="You won!";
-    }
-    if(userChoice === 'scissors' && computerChoice === 'rock'){
-        document.getElementById('winner').innerHTML="The computer won!";
-    }
-    else{
-        document.getElementById('winner').innerHTML="You won!";
-    }
+    
 }
 let playGame = () => {
     getUserInput();
     computerChoice = getComputerInput();
-    document.getElementById('computerChoice').innerHTML = computerChoice;
-    document.getElementById('winner').innerHTML = function () {
-        determineWinner(userChoice, computerChoice);
-    }}
+    document.getElementById('computerchoice').innerHTML = computerChoice;
+    determineWinner(getUserInput(), computerChoice);
+    
+    }
 
     document.getElementById("play").onclick = function() {playGame();}
