@@ -1,7 +1,7 @@
 const getUserInput = (userChoice) =>{
     userChoice = document.getElementById("userchoice").value;
     userChoice = userChoice.toLowerCase();
-return userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors'? userChoice : alert('Error!');
+return userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors'? userChoice: console.log(userChoice);
 
 }
 const getComputerInput = () => {
@@ -20,7 +20,10 @@ const getComputerInput = () => {
     }
 }
 const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === 'rock' && computerChoice === 'paper' || userChoice === 'paper' && computerChoice === 'scissors' || userChoice === 'scissors' && computerChoice === 'rock' ){
+    if (userChoice === undefined){
+        document.getElementById('winner').innerHTML= 'Please enter a valid entry!';
+    }
+    else if (userChoice === 'rock' && computerChoice === 'paper' || userChoice === 'paper' && computerChoice === 'scissors' || userChoice === 'scissors' && computerChoice === 'rock' ){
         document.getElementById('winner').innerHTML="The computer won!";
     }
     else if (userChoice === computerChoice){

@@ -9,6 +9,8 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: #17BEBB;
+    color: white;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -46,6 +48,11 @@ body{
     align-self: center;
     justify-self: center;
     margin-right: 125px;
+    border: none;
+    border-bottom: #E4572E 3px solid;
+}
+#userchoice:hover{
+    border-bottom: rgb(255, 136, 0) 3px solid;
 }
 #computer-header{
     grid-column: 2 / span 2;
@@ -72,4 +79,17 @@ body{
     grid-row: 6;
     align-self: center;
     justify-self: center;
+    background-color: #E4572E;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-color: #E4572E;
+    box-shadow: none;
+}
+#play:hover {
+    background-color: rgb(255, 136, 0);
+    border-color:rgb(255, 136, 0);
+    color: white;
 }
